@@ -1,0 +1,37 @@
+{
+    "1": {
+        "name": "APPLE CRUMBLE CUPCAKE",
+        "price": 5.5,
+        "qty": 20
+    },
+    "2": {
+        "name": "BANANA BREAD LATTE CUPCAKE",
+        "price": 3.5,
+        "qty": 2
+    },
+    "3": {
+        "name": "CHOC VANILLA CUPCAKE",
+        "price": 4.5,
+        "qty": 40
+    },
+    "4": {
+        "name": "RED VELVET CUPCAKE",
+        "price": 8.5,
+        "qty": 13
+    },
+    "5": {
+        "name": "ROCKY ROAD CUPCAKE",
+        "price": 7.5,
+        "qty": 23
+    }, 
+    "6": {
+        "name": "STRAWBERRY CUPCAKE",
+        "price": 6,
+        "qty": 10
+    }, 
+    "7": {
+        "name": "MIX CHRISTMAS BOX",
+        "price": 36,
+        "qty": 8
+    }
+}
