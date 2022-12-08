@@ -2,15 +2,8 @@ from os import system
 from art import *
 import os.path
 import json
+from functions import *
 
-def main_menu():
-    print("1. Show Menu")
-    print("2. Go to Cart")
-    print("3. Checkout")
-    print("4. Show the history")
-    print("5. exit the program")
-    opt = input("Please select the option(1-5): ")
-    return opt
 
 
 with open("original.txt") as f:
@@ -27,7 +20,7 @@ cart_dict = {}
 
 while option != "5":
     system("clear")
-    # welcome()
+    welcome()
 
     option = main_menu()
 
