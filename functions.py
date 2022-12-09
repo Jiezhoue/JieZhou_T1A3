@@ -23,3 +23,11 @@ def submenu(list):
     menu_display(list)
     select=input('Please input Cupcake item number (1,2,3...) to purchase the item or enter "m" back to main menu: ')
     return select  
+
+def cartmenu(list):
+    if len(list) != 0:
+        menu_display(list)
+        select = input("Input item number to delete the item from your cart or enter m to back to main menu: ")
+        return select
+    else:
+        return False

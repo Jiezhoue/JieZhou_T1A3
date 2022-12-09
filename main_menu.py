@@ -32,7 +32,7 @@ while option != "5":
 
             tprint("Cupecake Menu")
 
-            # select = submenu(origial_dict)
+            select = submenu(origial_dict)
             if select in origial_dict:
                 system("clear")
                 tprint("Cupecake Menu")
@@ -57,7 +57,7 @@ while option != "5":
 
             tprint("Items In Cart")
 
-            # choice = cartmenu(cart_dict)
+            choice = cartmenu(cart_dict)
             if choice == False:
                 input("You don't have any items in the shopping cart, press enter to return to main menu....")
                 break
