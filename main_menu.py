@@ -39,15 +39,15 @@ date = {"Monday": "1", "Tuesday": "2", "Wednesday": "3", "Thursday": "4", "Frida
 
 with open("original.txt") as f:
         data = f.read()
-
-file = json.loads(data)
+origial_dict = json.loads(data) #read the stock items from txt file and assign to variable original_dict as a dictionary
 
 option = ""
-
-origial_dict = {}
-
-origial_dict = file
-cart_dict = {}
+if os.path.exists("cart.txt"):
+    with open("cart.txt") as f:
+        cart_data = f.read()
+        cart_dict = json.loads(cart_data)
+else:
+    cart_dict = {}
 
 while option != "5":
     system("clear")
@@ -92,6 +92,7 @@ while option != "5":
                 print("Item no is wrong, please imput the correct item no..")
                 input("enter to contine.....")
                 continue
+
     elif option =="3":
         system("clear")
         tprint("Reciept")
