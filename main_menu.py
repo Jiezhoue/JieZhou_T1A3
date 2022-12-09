@@ -3,6 +3,8 @@ from art import *
 import os.path
 import json
 from functions import *
+from history import item
+
 
 def buy_item(item_no):
     if origial_dict[item_no]["qty"] == 0:
@@ -27,6 +29,13 @@ def delete_item(item_no):
     else:
         print("The item no is wrong, please select again....")
         input("enter to contine.....")
+
+
+def display_receipt():
+    new = item.add_history(item, date, cart_dict)
+    print(new)
+
+
 
 with open("original.txt") as f:
         data = f.read()
@@ -99,7 +108,7 @@ while option != "5":
         tprint("Reciept")
 
         if len(cart_dict) != 0:
-            # display_receipt(cart_dict)
+            display_receipt()
             cart_dict = {}
             input("enter to continue........")
 
