@@ -4,6 +4,8 @@ import os.path
 import json
 from functions import *
 from history import item
+from datetime import datetime
+
 
 
 def buy_item(item_no):
@@ -35,6 +37,7 @@ def display_receipt():
     new = item.add_history(item, date, cart_dict)
     print(new)
 
+date = {"Monday": "1", "Tuesday": "2", "Wednesday": "3", "Thursday": "4", "Friday": "5", "Saturday": "6", "Sunday": "7"}
 
 
 with open("original.txt") as f:
