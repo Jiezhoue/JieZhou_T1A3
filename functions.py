@@ -1,5 +1,7 @@
 from art import *
 import pandas
+from history import item
+from datetime import datetime
 
 def main_menu():
     print("1. Show Menu")
@@ -31,3 +33,7 @@ def cart_menu(list):
         return select
     else:
         return False
+
+def display_receipt(date, cart_items):
+    new = item.add_history(item, date, cart_items)
+    return new

@@ -31,9 +31,7 @@ def delete_item(item_no):
         print("The item no is wrong, please select again....")
         input("enter to contine.....")
 
-def display_receipt():
-    new = item.add_history(item, date, cart_dict)
-    return new
+
 
 
 date = {"Monday": "1", "Tuesday": "2", "Wednesday": "3", "Thursday": "4", "Friday": "5", "Saturday": "6", "Sunday": "7"}
@@ -98,7 +96,7 @@ while option != "5":
         system("clear")
         tprint("Reciept")
         if len(cart_dict) != 0:
-            display_receipt()
+            display_receipt(date, cart_dict)
             cart_dict = {}
             input("enter to continue........")
         else:
@@ -121,7 +119,7 @@ while option != "5":
     elif option =="5":
         system("clear")
         tprint("Thanks for purchase.")
-        continue
+        break
     else:
         print("The input is invalid, please input the valid menu no.")
         system("clear")

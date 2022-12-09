@@ -46,3 +46,11 @@ You have purchaced 2 ROCKY ROAD CUPCAKE and price is 7.5 each
 Cause today is Friday, ROCKY ROAD CUPCAKE has 20% off
 total amount is 23.0
 =============================================================================
+Date: 2022-12-09 21:32:39.255991   Friday
+-----------------------------------------
+You have purchaced 1 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+You have purchaced 1 ROCKY ROAD CUPCAKE and price is 7.5 each
+Cause today is Friday, ROCKY ROAD CUPCAKE has 20% off
+You have purchaced 2 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
+total amount is 18.5
+=============================================================================
