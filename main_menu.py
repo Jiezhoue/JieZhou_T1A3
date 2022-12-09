@@ -18,6 +18,15 @@ def buy_item(item_no):
             origial_dict[item_no]["qty"] -= 1
             print(f'1 {cart_dict[item_no]["name"]} has been added to your cart.')
 
+def delete_item(item_no):
+    if cart_dict[item_no]["qty"] > 0:
+        cart_dict[item_no]["qty"] -= 1
+        if cart_dict[item_no]["qty"] == 0:
+            cart_dict.pop(item_no)
+        origial_dict[item_no]["qty"] += 1
+    else:
+        print("The item no is wrong, please select again....")
+        input("enter to contine.....")
 
 with open("original.txt") as f:
         data = f.read()
@@ -76,7 +85,7 @@ while option != "5":
                 break
             elif choice in cart_dict:
                 print("aaaa")
-                # delete_item(choice)
+                delete_item(choice)
             elif choice != "m":
                 system("clear")
                 tprint("Items In Cart")
