@@ -4,6 +4,19 @@ import os.path
 import json
 from functions import *
 
+def buy_item(item_no):
+    if origial_dict[item_no]["qty"] == 0:
+        print("No item in stock......Please select other items")
+    else:
+        if item_no in cart_dict:
+            cart_dict[item_no]["qty"] += 1
+            origial_dict[item_no]["qty"] -= 1
+            print(f'1 {cart_dict[item_no]["name"]} has been added to your cart.')
+        else:
+            cart_dict[item_no] = origial_dict[item_no].copy()
+            cart_dict[item_no]["qty"] = 1
+            origial_dict[item_no]["qty"] -= 1
+            print(f'1 {cart_dict[item_no]["name"]} has been added to your cart.')
 
 
 with open("original.txt") as f:
@@ -36,7 +49,7 @@ while option != "5":
             if select in origial_dict:
                 system("clear")
                 tprint("Cupecake Menu")
-                # buy_item(select)
+                buy_item(select)
             
                 
                 input("Press Enter to contine.....")
