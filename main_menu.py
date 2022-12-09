@@ -125,3 +125,9 @@ while option != "5":
         system("clear")
 
 tprint("Bye, see you next time!!")
+
+if len(cart_dict) != 0:
+    with open("cart.txt", "w") as outfile:
+        json.dump(cart_dict, outfile)
+else:
+    os.remove("cart.txt")
