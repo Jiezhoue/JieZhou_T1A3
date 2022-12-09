@@ -7,7 +7,6 @@ from history import item
 from datetime import datetime
 
 
-
 def buy_item(item_no):
     if origial_dict[item_no]["qty"] == 0:
         print("No item in stock......Please select other items")
@@ -32,7 +31,6 @@ def delete_item(item_no):
         print("The item no is wrong, please select again....")
         input("enter to contine.....")
 
-
 def display_receipt():
     new = item.add_history(item, date, cart_dict)
     return new
@@ -56,24 +54,18 @@ cart_dict = {}
 while option != "5":
     system("clear")
     welcome()
-
     option = main_menu()
-
     if option == "1":
         system("clear")
         select= ""
         while select!="m":
             system("clear")
-
             tprint("Cupecake Menu")
-
             select = item_menu(origial_dict)
             if select in origial_dict:
                 system("clear")
                 tprint("Cupecake Menu")
-                buy_item(select)
-            
-                
+                buy_item(select)              
                 input("Press Enter to contine.....")
                 continue
             elif select == "m":
@@ -83,15 +75,12 @@ while option != "5":
                 tprint("Cupecake Menu")
                 print("incalid input....")
                 input("enter to contine.....")
-
     elif option =="2":
         system("clear")
         choice = ""
         while choice != "m":
             system("clear")
-
             tprint("Items In Cart")
-
             choice = cart_menu(cart_dict)
             if choice == False:
                 input("You don't have any items in the shopping cart, press enter to return to main menu....")
@@ -105,23 +94,17 @@ while option != "5":
                 print("Item no is wrong, please imput the correct item no..")
                 input("enter to contine.....")
                 continue
-
-
     elif option =="3":
         system("clear")
         tprint("Reciept")
-
         if len(cart_dict) != 0:
             display_receipt()
             cart_dict = {}
             input("enter to continue........")
-
         else:
             print("There is no item in cart.....")
             input("enter to continue........")
-            continue
-
-    
+            continue   
     elif option =="4":
         system("clear")
         tprint("Purchase History")
@@ -137,10 +120,10 @@ while option != "5":
             continue
     elif option =="5":
         system("clear")
-        print("Thanks for purchase.")
+        tprint("Thanks for purchase.")
         continue
     else:
-        print("invalid")
+        print("The input is invalid, please input the valid menu no.")
         system("clear")
 
-print("Bye, see you next time!!")
+tprint("Bye, see you next time!!")

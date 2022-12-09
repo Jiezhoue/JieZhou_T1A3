@@ -19,3 +19,30 @@ total amount is 5.5
 You have purchaced 1 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
 total amount is 9.0
 =============================================================================
+Date: 2022-12-09 21:18:56.226429   Friday
+-----------------------------------------
+You have purchaced 1 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+total amount is 5.5
+You have purchaced 1 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
+total amount is 9.0
+=============================================================================
+Date: 2022-12-09 21:22:45.120106   Friday
+-----------------------------------------
+You have purchaced 3 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+You have purchaced 2 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
+total amount is 23.5
+=============================================================================
+Date: 2022-12-09 21:23:08.644000   Friday
+-----------------------------------------
+You have purchaced 2 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+You have purchaced 2 ROCKY ROAD CUPCAKE and price is 7.5 each
+Cause today is Friday, this item can have 20% off
+total amount is 23.0
+=============================================================================
+Date: 2022-12-09 21:24:44.790150   Friday
+-----------------------------------------
+You have purchaced 2 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+You have purchaced 2 ROCKY ROAD CUPCAKE and price is 7.5 each
+Cause today is Friday, ROCKY ROAD CUPCAKE has 20% off
+total amount is 23.0
+=============================================================================
