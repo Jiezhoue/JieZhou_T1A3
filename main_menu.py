@@ -41,13 +41,18 @@ with open("original.txt") as f:
         data = f.read()
 origial_dict = json.loads(data) #read the stock items from txt file and assign to variable original_dict as a dictionary
 
-option = ""
 if os.path.exists("cart.txt"):
     with open("cart.txt") as f:
         cart_data = f.read()
         cart_dict = json.loads(cart_data)
 else:
     cart_dict = {}
+
+if cart_dict != {}:
+    for key in cart_dict:
+        origial_dict[key]["qty"] = origial_dict[key]["qty"] - cart_dict[key]["qty"]
+
+option = ""
 
 while option != "5":
     system("clear")
@@ -130,5 +135,5 @@ tprint("Bye, see you next time!!")
 if len(cart_dict) != 0:
     with open("cart.txt", "w") as outfile:
         json.dump(cart_dict, outfile)
-else:
+elif os.path.exists("cart.txt"):
     os.remove("cart.txt")

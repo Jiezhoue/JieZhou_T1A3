@@ -54,3 +54,16 @@ Cause today is Friday, ROCKY ROAD CUPCAKE has 20% off
 You have purchaced 2 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
 total amount is 18.5
 =============================================================================
+Date: 2022-12-10 09:09:16.955603   Saturday
+-----------------------------------------
+You have purchaced 2 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+You have purchaced 1 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
+You have purchaced 2 STRAWBERRY CUPCAKE and price is 6 each
+Cause today is Saturday, STRAWBERRY CUPCAKE has 20% off
+total amount is 24.1
+=============================================================================
+Date: 2022-12-10 09:16:57.933441   Saturday
+-----------------------------------------
+You have purchaced 1 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+total amount is 5.5
+=============================================================================
