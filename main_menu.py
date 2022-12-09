@@ -35,7 +35,8 @@ def delete_item(item_no):
 
 def display_receipt():
     new = item.add_history(item, date, cart_dict)
-    print(new)
+    return new
+
 
 date = {"Monday": "1", "Tuesday": "2", "Wednesday": "3", "Thursday": "4", "Friday": "5", "Saturday": "6", "Sunday": "7"}
 

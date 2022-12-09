@@ -6,8 +6,6 @@ class item:
         self.item = item
 
     def add_history(self, date_file, history_dict):
-        # a = {self.date: history_dict}
-        # return a
         total_amount = 0
         f = open("receipt.txt", "a")
         dt = datetime.now()

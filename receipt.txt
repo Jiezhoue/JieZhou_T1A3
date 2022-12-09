@@ -3,3 +3,19 @@ Date: 2022-12-09 20:49:38.870594   Friday
 You have purchaced 2 APPLE CRUMBLE CUPCAKE and price is 5.5 each
 total amount is 11.0
 =============================================================================
+Date: 2022-12-09 20:58:03.418940   Friday
+-----------------------------------------
+You have purchaced 2 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+total amount is 11.0
+You have purchaced 1 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
+total amount is 14.5
+You have purchaced 1 CHOC VANILLA CUPCAKE and price is 4.5 each
+total amount is 19.0
+=============================================================================
+Date: 2022-12-09 21:12:15.225975   Friday
+-----------------------------------------
+You have purchaced 1 APPLE CRUMBLE CUPCAKE and price is 5.5 each
+total amount is 5.5
+You have purchaced 1 BANANA BREAD LATTE CUPCAKE and price is 3.5 each
+total amount is 9.0
+=============================================================================
