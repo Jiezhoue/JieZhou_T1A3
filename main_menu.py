@@ -9,7 +9,7 @@ from datetime import datetime
 
 def buy_item(item_no):
     if origial_dict[item_no]["qty"] == 0:
-        print("No item in stock......Please select other items")
+        print("Item not in stock......Please select other items")
     else:
         if item_no in cart_dict:
             cart_dict[item_no]["qty"] += 1
@@ -34,8 +34,14 @@ def delete_item(item_no):
 
 
 
-date = {"Monday": "1", "Tuesday": "2", "Wednesday": "3", "Thursday": "4", "Friday": "5", "Saturday": "6", "Sunday": "7"}
-
+date = {"Monday": "1",     # discount based on today's date
+        "Tuesday": "2", 
+        "Wednesday": "3", 
+        "Thursday": "4", 
+        "Friday": "5", 
+        "Saturday": "6", 
+        "Sunday": "7"
+    }
 
 with open("original.txt") as f:
         data = f.read()
@@ -54,9 +60,11 @@ if cart_dict != {}: # adjust the quantity of stock items based on the existing s
 
 option = ""
 
+
 while option != "5": 
     system("clear") 
     welcome() # shop ASCII title using art package
+    
     option = main_menu() # return user input
     if option == "1":
         system("clear")
@@ -64,7 +72,8 @@ while option != "5":
         while select!="m":
             system("clear")
             tprint("Cupecake Menu") # ASCII subtitle
-            select = item_menu(origial_dict)
+            select = item_menu(origial_dict, date)
+            
             if select in origial_dict: # check if the user input exist in stock items dictionory key value
                 system("clear")
                 tprint("Cupecake Menu")
@@ -126,14 +135,14 @@ while option != "5":
     
     elif option =="5": # exit the program
         system("clear")
-        tprint("Thanks for purchase.")
+        tprint("Thanks for your purchase.")
         break
 
     else:
         print("The input is invalid, please input the valid menu no.")
         system("clear")
 
-tprint("See you next time!!")
+tprint("See you next time!")
 
 if len(cart_dict) != 0: # before exit, check the shopping cart and save the items in txt file
     with open("cart.txt", "w") as outfile:
