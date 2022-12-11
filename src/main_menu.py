@@ -109,9 +109,9 @@ while option != "5":
     elif option =="3":
         system("clear")
         tprint("Receipt")
-        if len(cart_dict) != 0: # checkout and display the receipt
+        if len(cart_dict) != 0:         # checkout and display the receipt
             display_receipt(date, cart_dict)
-            cart_dict = {} # after checkout, empty the shopping cart
+            cart_dict = {}              # after checkout, empty the shopping cart
             input("enter to continue........")
         else:
             print("There is no item in cart.....")
