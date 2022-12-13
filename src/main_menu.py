@@ -5,6 +5,7 @@ import json
 from functions import *
 from history import item
 from datetime import datetime
+import time
 
 
 def buy_item(item_no):
@@ -42,6 +43,7 @@ date = {"Monday": "1",                      # discount based on today's date
         "Sunday": "7"
     }
 
+
 with open("original.txt") as f:
         data = f.read()
 origial_dict = json.loads(data)             # read the stock items from txt file and assign to variable original_dict as a dictionary
@@ -58,6 +60,8 @@ if cart_dict != {}:                         # adjust the quantity of stock items
         origial_dict[key]["qty"] = origial_dict[key]["qty"] - cart_dict[key]["qty"]
 
 option = ""
+
+time.sleep(4)                               # wait for 5 second before execute the program
 
 try:
     while option != "5": 
