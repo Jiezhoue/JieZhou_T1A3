@@ -5,6 +5,7 @@ from functions import *
 from history import item
 from datetime import datetime
 import time
+
 try:
     from art import *
 except ImportError:
@@ -59,9 +60,9 @@ if os.path.exists("cart.txt"):              # check if the shopping cart is empt
 else:
     cart_dict = {}
 
-if cart_dict != {}:                         # adjust the quantity of stock items based on the existing shopping cart items
-    for key in cart_dict:
-        origial_dict[key]["qty"] = origial_dict[key]["qty"] - cart_dict[key]["qty"]
+# if cart_dict != {}:                         # adjust the quantity of stock items based on the existing shopping cart items
+#     for key in cart_dict:
+#         origial_dict[key]["qty"] = origial_dict[key]["qty"] - cart_dict[key]["qty"]
 
 option = ""
 
@@ -177,3 +178,6 @@ if len(cart_dict) != 0:                         # before exit, check the shoppin
         json.dump(cart_dict, outfile)
 elif os.path.exists("cart.txt"):                # if the shopping cart is empty, remove the file
     os.remove("cart.txt")
+
+with open("original.txt", "w") as outfile:
+    json.dump(origial_dict, outfile)
