@@ -153,10 +153,10 @@ try:
             tprint("See you next time!")
             print("=======================================================================================================================================")
             break
-        else:
-            system("clear")
-            print("The input is invalid, please input the valid menu no.")
-            input("Press return to continue..........")
+        # else:
+        #     system("clear")
+        #     print("The input is invalid, please input the valid menu no.")
+        #     input("Press return to continue..........")
 except:
     print("The input is invalid, please input the valid menu no.")
     input("Press return to continue..........")
