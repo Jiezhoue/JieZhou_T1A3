@@ -1,11 +1,15 @@
 from os import system
-from art import *
 import os.path
 import json
 from functions import *
 from history import item
 from datetime import datetime
 import time
+try:
+    from art import *
+except ImportError:
+    raise ImportError("The art package is not installed")
+
 
 
 def buy_item(item_no):
@@ -63,103 +67,109 @@ option = ""
 
 time.sleep(4)                               # wait for 5 second before execute the program
 
-try:
-    while option != "5": 
+
+while option != "5": 
+    
+    system("clear") 
+    welcome()                               # shop ASCII title using art package
+    try:
+        option = int(main_menu())           # return user input
+    except ValueError:                      # if the user input is alphabet, prompt ValueError message
         system("clear") 
-        welcome()                           # shop ASCII title using art package
+        print("Please enter a valid integer 1-5")
+        input("Press return to continue......")
+        continue
         
-        option = main_menu()                # return user input
-        
-        if option == "1":
+    if option == 1:
+        system("clear")
+        select= ""
+        while select!="m":
             system("clear")
-            select= ""
-            while select!="m":
-                system("clear")
-                print("================================================================================")
-                tprint("Cupecake Menu")     # ASCII subtitle
-                print("================================================================================")
+            print("================================================================================")
+            tprint("Cupecake Menu")     # ASCII subtitle
+            print("================================================================================")
 
-                select = item_menu(origial_dict, date)
-                
-                if select in origial_dict:  # check if the user input exist in stock items dictionory key value
-                    system("clear")
-                    tprint("Cupecake Menu")
-                    buy_item(select)        # add item into shopping cart and decrease the quantity of that item in stock              
-                    input("Press return to contine.....")
-                    continue
-                elif select == "m":
-                    break
-                else:
-                    system("clear")
-                    tprint("Cupecake Menu")
-                    print("This item no does not exist, please input correct item no...")
-                    input("Press return to contine.....")
-        
-        elif option =="2":
-            system("clear")
-            choice = ""
-            while choice != "m":
+            select = item_menu(origial_dict, date)
+            
+            if select in origial_dict:  # check if the user input exist in stock items dictionory key value
                 system("clear")
-                print("=======================================================================")
-                tprint("Items In Cart")
-                print("=======================================================================")
-                choice = cart_menu(cart_dict)   # display the shopping cart items
-                if choice == False:             # shopping cart is empty
-                    input("You don't have any items in the shopping cart, press return back to main menu....")
-                    break
-                elif choice in cart_dict:
-                    delete_item(choice)
-                elif choice != "m":
-                    system("clear")
-                    tprint("Items In Cart")
-                    print("Item no is wrong, please imput the correct item no..")
-                    input("Press return to contine.....")
-                    continue
-
-        elif option =="3":
-            system("clear")
-            print("==========================================")
-            tprint("Receipt")
-            print("==========================================")
-            if len(cart_dict) != 0:             # checkout and display the receipt
-                display_receipt(date, cart_dict)
-                cart_dict = {}                  # after checkout, empty the shopping cart
-                input("Press return to continue........")
-            else:
-                print("There is no item in cart.....")
-                input("Press return to continue........")
-                continue  
-        
-        elif option =="4":
-            system("clear")
-            print("============================================================================================")
-            tprint("Purchase History")
-            print("============================================================================================")
-            if os.path.exists("receipt.txt"):   # check if user has purchased any items or not
-                receipt_file = open("receipt.txt", "r")
-                line_list = receipt_file.readlines()
-                for line in line_list:
-                    print(line)
-                input("Press return to continue.......")
-            else:
-                print("There is no history record.....")
-                input("Press return to continue.......")
+                tprint("Cupecake Menu")
+                buy_item(select)        # add item into shopping cart and decrease the quantity of that item in stock              
+                input("Press return to contine.....")
                 continue
-        
-        elif option =="5": # exit the program
+            elif select == "m":
+                break
+            else:
+                system("clear")
+                tprint("Cupecake Menu")
+                print("This item no does not exist, please input correct item no...")
+                input("Press return to contine.....")
+    
+    elif option == 2:
+        system("clear")
+        choice = ""
+        while choice != "m":
             system("clear")
-            print("=======================================================================================================================================")
-            tprint("Thanks for your purchase")
-            tprint("See you next time!")
-            print("=======================================================================================================================================")
-            break
-        # else:
-        #     system("clear")
-        #     print("The input is invalid, please input the valid menu no.")
-        #     input("Press return to continue..........")
-except:
-    print("The input is invalid, please input the valid menu no.")
-    input("Press return to continue..........")
+            print("=======================================================================")
+            tprint("Items In Cart")
+            print("=======================================================================")
+            choice = cart_menu(cart_dict)   # display the shopping cart items
+            if choice == False:             # shopping cart is empty
+                input("You don't have any items in the shopping cart, press return back to main menu....")
+                break
+            elif choice in cart_dict:
+                delete_item(choice)
+            elif choice != "m":
+                system("clear")
+                tprint("Items In Cart")
+                print("Item no is wrong, please imput the correct item no..")
+                input("Press return to contine.....")
+                continue
+
+    elif option == 3:
+        system("clear")
+        print("==========================================")
+        tprint("Receipt")
+        print("==========================================")
+        if len(cart_dict) != 0:             # checkout and display the receipt
+            display_receipt(date, cart_dict)
+            cart_dict = {}                  # after checkout, empty the shopping cart
+            input("Press return to continue........")
+        else:
+            print("There is no item in cart.....")
+            input("Press return to continue........")
+            continue  
+    
+    elif option == 4:
+        system("clear")
+        print("============================================================================================")
+        tprint("Purchase History")
+        print("============================================================================================")
+        if os.path.exists("receipt.txt"):   # check if user has purchased any items or not
+            receipt_file = open("receipt.txt", "r")
+            line_list = receipt_file.readlines()
+            for line in line_list:
+                print(line)
+            input("Press return to continue.......")
+        else:
+            print("There is no history record.....")
+            input("Press return to continue.......")
+            continue
+    
+    elif option == 5: # exit the program
+        system("clear")
+        print("=======================================================================================================================================")
+        tprint("Thanks for your purchase")
+        tprint("See you next time!")
+        print("=======================================================================================================================================")
+        break
+    else:
+        system("clear")
+        print("The input menu no. is invalid, please input the valid menu no. (1-5)")
+        input("Press return to continue..........")
+
+
+
 
 
 if len(cart_dict) != 0:                         # before exit, check the shopping cart and save the items in txt file
