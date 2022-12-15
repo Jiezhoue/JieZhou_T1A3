@@ -17,53 +17,54 @@ items = {
     "1": {
         "name": "APPLE CRUMBLE CUPCAKE",
         "price": 5.5,
-        "qty": 20
-    },
-    "2": {
-        "name": "BANANA BREAD LATTE CUPCAKE",
-        "price": 3.5,
-        "qty": 2
+        "qty": 1
     },
     "3": {
         "name": "CHOC VANILLA CUPCAKE",
         "price": 4.5,
-        "qty": 40
+        "qty": 2
     },
     "4": {
         "name": "RED VELVET CUPCAKE",
         "price": 8.5,
-        "qty": 13
+        "qty": 1
     },
     "5": {
         "name": "ROCKY ROAD CUPCAKE",
         "price": 7.5,
-        "qty": 23
+        "qty": 1
     }, 
     "6": {
         "name": "STRAWBERRY CUPCAKE",
         "price": 6,
-        "qty": 10
+        "qty": 1
     }, 
     "7": {
         "name": "MIX CHRISTMAS BOX",
         "price": 36,
-        "qty": 8
+        "qty": 1
     }
 }
 
-dt = datetime.now()
 
-def find(list, day):
+def find(list, week, day):
     for i in list:
-        if i == day[dt.strftime('%A')]:
-            return True
+        if i == week[day]:
+            return i
 
-def amount(list, qty):
-    return list["1"]["price"] * qty
-    
+
+def amount(date_file, history_dict, day):
+    total_amount = 0
+    for i in history_dict: # loop all the items in shopping cart when checkout and calculate the total amount
+        if i == date_file[day]: # check each item if it's on discount or not based on today's special
+            total_amount = total_amount + history_dict[i]['qty'] * (history_dict[i]['price']*(1-0.2))
+        else:
+            total_amount = total_amount + history_dict[i]['qty'] * history_dict[i]['price']
+                
+    return total_amount
 
 def test_find():
-    assert find(items, date) == True
+    assert find(items, date, "Saturday") == "6"
 
 def test_amount():
-    assert amount(items, 2) == 11
+    assert amount(date, items, "Sunday") == 65.3
