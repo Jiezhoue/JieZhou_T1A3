@@ -14,10 +14,16 @@ It will show which version of Python3 you installed. If you do not have Python3.
 
 User the commond line mentioned before to check if Python3 successfully installed or not.
 
-Unzip the JieZhou_T1A3 folder and nagivate to the src folder inside using this commond
+After python3 successfully installed, type the command below.
 
 ```
-cd [YOUR DOWNLOAD ZIP FILE FOLDER]/JieZhou_T1A3/src
+git clone git@github.com:Jiezhoue/JieZhou_T1A3.git
+```
+
+nagivate to the src folder inside using this commond
+
+```
+cd JieZhou_T1A3/src
 ```
 
 Create the virtual environment to install some packages and run the application
@@ -27,24 +33,18 @@ python3 -m venv venv
 ```
 Activate the virtual environment
 ```
-Source venv/bin/activate
+source venv/bin/activate
 ```
 Install pytest, art, pandas packages
 
 ```
-pip install -U pytest
-```
-```
-pip install art
-```
-```
-pip install pandas
+./packages.sh
 ```
 
 Once everthing is set up, use the below script to start the program
 
 ```
-.cupeacke_shop.sh
+./cupcake_shop.sh [your name]
 ```
 
 # Style Guide
@@ -99,6 +99,23 @@ if cart_dict[item_no]["qty"] > 0:
 # Program control flowchart
 
 ![flowchart](docs/terminal.png)
+
+# Development Plan
+The internet has changed the way we shop. Because of the numerous advantages and benefits, more and more people these days prefer buying things online over the conventional method of going into stores. 
+
+Convenience is the biggest perk. Where else can you comfortably shop at midnight while in your pajamas? There are no lines to wait in or cashiers to track down to help you with your purchases, and you can do your shopping in minutes.
+
+This app is designed to simulate the online shopping purchase and checkout process.
+
+## User expericence:
+- Once user start the program, they will see a list of menu options. Include 4 options bring user to the submenu and 1 option to quit the program.
+- If user select the first option "Show menu", there will be a list of stock items show on the screen. And it will display today's special at the bottom of that list. And user can input the item no. to add this item into the shopping cart or enter "m" back to main menu.
+- If user select the second option "Go to cart", there will be a list of items on the screen which user decide to select and add into shopping cart from the previous menu. User can input item no. to delete the item from the shopping cart or enter "m" back to main menu.
+- If user select "Checkout" option, the receipt will show on the screen with each selected items name, price and quantity, and total price. If some purchased items are today's special, it will show in the receipt as well.
+-  If user select "Show purchase history" option, it will print the whole list of user purchase history seperate with purchase date.
+- As long as "exit the progeam" not seleted, user can continue purchase items in this program.
+
+
 
 
 # Features
