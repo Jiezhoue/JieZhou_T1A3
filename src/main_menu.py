@@ -39,7 +39,7 @@ def delete_item(item_no):
 
 
 
-date = {"Monday": "1",                      # discount based on today's date
+date = {"Monday": "1",                      # discount item no. based on today's date
         "Tuesday": "2", 
         "Wednesday": "3", 
         "Thursday": "4", 
@@ -67,7 +67,6 @@ else:
 option = ""
 
 time.sleep(4)                               # wait for 5 second before execute the program
-
 
 while option != "5": 
     
@@ -168,9 +167,6 @@ while option != "5":
         system("clear")
         print("The input menu no. is invalid, please input the valid menu no. (1-5)")
         input("Press return to continue..........")
-
-
-
 
 
 if len(cart_dict) != 0:                         # before exit, check the shopping cart and save the items in txt file

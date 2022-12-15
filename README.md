@@ -184,6 +184,8 @@ The third feature is display the receipt on the screen when user select the chec
 
 # Implementation plan
 
+[Trello link: https://trello.com/b/v5Ptle7v/shopping-cart-app](https://trello.com/b/v5Ptle7v/shopping-cart-app)
+
 I use trello as a project management platform to implement and track my project.
 
 ![Project management](docs/trello1.png)
