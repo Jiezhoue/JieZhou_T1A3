@@ -1,5 +1,8 @@
 # GitHub Link
-[Github Repo : https://github.com/Jiezhoue/JieZhou_T1A3.git](https://github.com/Jiezhoue/JieZhou_T1A3.git)
+[Github Repo - https://github.com/Jiezhoue/JieZhou_T1A3.git](https://github.com/Jiezhoue/JieZhou_T1A3.git)
+
+# Presentation video Link
+[Youtube presentation link - https://www.youtube.com/watch?v=PJilN0UT2gQ](https://www.youtube.com/watch?v=PJilN0UT2gQ)
 
 # Help documentation
 This terminal application requires Python3 to run. If you don't know whether you have python3 installed or not, you can type below commond in your ternimal.
@@ -201,3 +204,18 @@ I use trello as a project management platform to implement and track my project.
 ![Feaure 1 checklist](docs/feature3.png)
 
 This program is a kind of simulation of online shopping and checkout function we are using everyday. 
+
+# Two test cases
+
+## The Test Spreadsheet is in the docs folder
+
+## Test case 1 - Receipt function
+- Check if today's discount item no. is matching the stock item no. based on day of the week.
+- Check the total amount when some selected items are belong to today's special
+
+## Test case 2 - Delete items
+- When user purchsse items, delete those items from the stock list (decrease the quantity)
+- If the selected item's quantity is 0, prompt message
+
+## Test case 3 - use json read the file
+- Read txt file and assign to a varible, check the len of that varible.
